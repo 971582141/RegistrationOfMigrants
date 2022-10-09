@@ -1,0 +1,39 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.245:3306/core
+    username: root
+    password: Admin~!@#$
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+mybatis-plus:
+  type-aliases-package: com.core.entity
+  global-config:
+    db-config:
+      #      field-strategy: ignored
+      #      全局默认主键类型
+      #      id-type: id_worker
+      #逻辑已删除值
+      logic-delete-value: 1
+      #逻辑未删除值
+      logic-not-delete-value: 0
+      #驼峰下划线转换
+      column-underline: true
+      #数据库大写下划线转换
+      #capital-mode: true
+  configuration:
+    #自动驼峰命名规则
+    map-underscore-to-camel-case: true
+    # sql执行语句打印
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#  type-enums-package: com.wpl.qqsd.em
+myPath:
+  filePath: '/home/files/files/'
+  imgPath: '/home/files/img/'
+  excelPath: '/home/files/excel/'
+  zipPath: '/home/files/zip/'
